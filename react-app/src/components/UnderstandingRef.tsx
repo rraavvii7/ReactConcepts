@@ -25,8 +25,10 @@ function UnderstandingRef() {
   };
   return (
     <>
-      <p>
-        Refs are used to access and modify DOM elements in React application
+      <p style={{ background: "#cfe2ff" }}>
+        The useRef Hook allows you to persist values between renders. It can be
+        used to store a mutable value that does not cause a re-render when
+        updated. It can be used to access a DOM element directly.
       </p>
       <input
         ref={inputRef}
