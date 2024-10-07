@@ -4,7 +4,7 @@ const withCounter = <P extends object>(
   OriginalComponent: React.ComponentType<P>
 ) => {
   const WrappedComponent = (props: P) => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState<number>(0);
     const handleCount = () => {
       setCount((prev) => prev + 1);
     };

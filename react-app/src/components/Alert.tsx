@@ -1,9 +1,13 @@
-import { ReactNode, useContext } from "react";
+import { ReactNode, useContext, useState } from "react";
 import { User, UserContext } from "./contextApi/userContext";
+import Child from "./Child";
 interface Props {
   children: ReactNode;
 }
 const Alert = ({ children }: Props) => {
+  const [child, setChild] = useState<string>(
+    "state variable coming from parent"
+  );
   const userCtx = useContext<User | null>(UserContext);
   const handleClick = () => {
     userCtx?.sayHello();
@@ -47,6 +51,10 @@ const Alert = ({ children }: Props) => {
       <button type="button" onClick={handleClick}>
         Say Hello
       </button>
+      {/* <Child value={child} />
+      <button onClick={() => setChild((prev) => prev + " " + prev.length)}>
+        Click Me to update child
+      </button> */}
     </>
   );
 };

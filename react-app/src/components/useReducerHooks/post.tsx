@@ -15,7 +15,7 @@ const Post = () => {
           return res.json();
         })
         .then((data) => {
-          dispatch({ type: ACTION_TYPES.FETCH_SUCCESS, payload: data });
+          dispatch({ type: ACTION_TYPES.FETCH_SUCCESS, payload: data }); //action has type and payload properties
         })
         .catch((err) => {
           dispatch({ type: ACTION_TYPES.FETCH_ERROR });
