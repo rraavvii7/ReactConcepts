@@ -23,8 +23,8 @@ export const UserContext = createContext<User | null>(null);
 const UserContextProvider = ({ children }: Props) => {
   const [user, setUser] = useState<UserDetails>({
     name: "Ravi",
-    company: "CBA",
-    address: "Manyata",
+    company: "Honeywell",
+    address: "Bangalore",
   });
   const changeName = (name: string) => setUser({ ...user, name });
   const changeCompany = (company: string) =>
