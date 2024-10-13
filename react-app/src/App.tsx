@@ -18,6 +18,7 @@ import store from "./components/reduxtoolkit/store";
 import ReducerProfile from "./components/reduxtoolkit/ReducerProfile";
 import UnderstandingPortal from "./components/createPortal";
 import Post from "./components/useReducerHooks/post";
+import AddToLocalStorage from "./components/customHooks/AddToLocalStorage";
 
 function App() {
   const items = ["Delhi", "Mumbai", "Kolkata", "Chennai", "Bangalore"];
@@ -65,6 +66,9 @@ function App() {
           <button type="button" className="btn btn-dark">
             <Link to="/reducer">Reducer</Link>
           </button>
+          <button type="button" className="btn btn-dark">
+            <Link to="/customHook">Custom Hook</Link>
+          </button>
         </nav>
         <Routes>
           <Route
@@ -103,6 +107,7 @@ function App() {
           />
           <Route path="/ref" element={<UnderstandingRef />} />
           <Route path="/reducer" element={<Post />} />
+          <Route path="/customHook" element={<AddToLocalStorage />} />
           <Route path="*" element={<Message />} />
         </Routes>
       </Router>
